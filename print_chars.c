@@ -70,7 +70,7 @@ int print_S(va_list S)
 	unsigned int i;
 	int count = 0;
 	char *str = va_arg(S, char *);
-	
+
 	if (str == NULL)
 		str = "(null)";
 	for (i = 0; str[i]; i++)
@@ -79,7 +79,6 @@ int print_S(va_list S)
 		{
 			_putchar('\\');
 			_putchar('x');
-				
 			count += 2;
 			count += hex_print(str[i]);
 		}
